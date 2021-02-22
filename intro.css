@@ -2,3 +2,45 @@ body {
   margin: 0;
   background-color: #0a0a0a;
 }
+.circle {
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  background-color: #e5e500;
+  margin: auto;
+}
+.one {
+  animation: glow 2s infinite;
+}
+.two {
+  border-radius: 200px;
+  animation: rotation 2s infinite linear;
+}
+.three {
+  animation: size 1s ease-in-out infinite alternate;
+}
+
+/*Animatie om de cirkel te laten gloeien*/
+@keyframes glow {
+  50% {box-shadow: 0px 0px 40px 20px #e5e500;}
+}
+
+/*Animatie om een object te roteren*/
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+
+/*Animatie om een object te vergroten en te verkleinen*/
+@keyframes size {
+    0% {
+        transform: scale(1.0);
+    }
+    100% {
+        transform: scale(1.5);
+    }
+}
