@@ -4,7 +4,15 @@
     <meta charset="utf-8">
     <link href="fly.css" rel="stylesheet"/>
   </head>
-  <body id="space">
+  <body id="space" onload="playMusic()">
+    <audio id="boom">
+        <source src="FlyingAssets/Boom.wav" type="audio/wav">
+        Your browser does not support this audio element
+    </audio>
+    <audio id="prime">
+        <source src="FlyingAssets/Prime.wav" type="audio/wav">
+        Your browser does not support this audio element
+    </audio>
     <img id="gunship" src="FlyingAssets/Gunship_top.png" />
     <script src="fly.js"></script>
   </body>
