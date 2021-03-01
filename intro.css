@@ -1,9 +1,61 @@
+* {
+  text-align: center;
+  font-weight: bold;
+}
 body {
-  margin: 0;
   background-color: #0a0a0a;
   overflow: hidden;
+  animation: bloom 3s linear;
+  animation-delay: 3s;
+  z-index: 1;
 }
 
+
+
+/*Voor alle text op de pagina's*/
+.text {
+  position: absolute;
+  top: 400px;
+  z-index: 20;
+}
+h1, h2, h3 {
+  margin: 0;
+  background: -webkit-linear-gradient(#444, #fff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+h1 {
+  font-size: 120px;
+}
+h2 {
+  font-size: 80px;
+}
+h3 {
+  font-size: 60px;
+}
+#nintendo {
+  left: 750px;
+  animation: appear 3s;
+  opacity: 0;
+  animation-delay: 1s;
+}
+#retro {
+  left: 640px;
+  animation: appear 3s;
+  opacity: 0;
+  animation-delay: 5s;
+}
+#metroid {
+  top: 350px;
+  left: 660px;
+  animation: appear 3s;
+  opacity: 0;
+  animation-delay: 9s;
+}
+
+
+
+/*Voor alle figuren bij de animaties*/
 .circle {
   position: absolute;
   top: 0;
@@ -15,7 +67,7 @@ body {
   border-radius: 50%;
 }
 .one {
-  animation: glow 2.5s;
+  animation: glow 0.6s;
   animation-fill-mode: forwards
 }
 .two {
@@ -24,30 +76,127 @@ body {
 }
 .three {
   border-radius: 20%;
-  animation: size 6s ease-in-out infinite alternate;
+  animation: size 3.5s ease-in-out alternate;
+  animation-delay: 0.5s;
+  opacity: 0;
+  transform: rotate(45deg) scale(0.425);
+  box-shadow: 0px 0px 100px 80px #426352;
+}
+.four {
+  animation: rotation 4s infinite linear, size 4s ease-in-out alternate;
+  animation-delay: 2s;
+  border-radius: 50%;
+  border-top-color: black;
+  border-bottom-color: black;
+  border-right-color: white;
+  border-left-color: white;
+  opacity: 0;
+  box-shadow: 0px 0px 100px 80px #426352;
+}
+#container {
+  width: 1400px;
+  height: 800px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  opacity: 0;
+  animation: go 3s linear;
+  animation-delay: 3.4s;
+  z-index: 12;
+}
+#overlay {
+  background-color: white;
+  z-index: 14;
+  opacity: 1;
+}
+.line {
+  box-shadow: 0px 0px 100px 80px #e5e500;
+  margin-top: 400px;
+  width: 100%;
+  height: 0px;
+  transform: rotate(-45deg);
+}
+.opline {
+  box-shadow: 0px 0px 100px 80px #e5e500;
+  width: 100%;
+  height: 0px;
+  transform: rotate(45deg);
 }
 
-/*Animatie om de cirkel te laten gloeien*/
+
+
+
+/*Animaties voor de objecten*/
 @keyframes glow {
-  100% {box-shadow: 0px 0px 100px 80px #e5e500;}
+  99% {
+    box-shadow: 0px 0px 100px 80px #e5e500;
+  }
+  100% {
+    box-shadow: 0px 0px 100px 80px #e5e500;
+    opacity: 0;
+  }
 }
-
+@keyframes appear {
+  10% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
 /*Animatie om een object te roteren*/
 @keyframes rotation {
   from {
+    opacity: 1;
     transform: rotate(0deg);
   }
   to {
-    transform: rotate(359deg);
+    opacity: 1;
+    transform: rotate(360deg);
   }
 }
-
+@keyframes go {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes bloom {
+  0% {
+    background-color: #0a0a0a;
+  }
+  10% {
+    background-color: #fafafa;
+  }
+  50% {
+    background-color: 636F57;
+  }
+  100% {
+    background-color: #0a0a0a;
+  }
+}
 /*Animatie om een object te vergroten en te verkleinen*/
 @keyframes size {
     0% {
         transform: scale(15.0) rotate(45deg);
+        opacity: 1;
+    }
+    99% {
+        transform: scale(1) rotate(45deg);
+        opacity: 1;
     }
     100% {
-        transform: scale(1.0) rotate(45deg);
+      opacity: 0;
     }
 }
