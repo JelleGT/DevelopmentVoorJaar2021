@@ -1,0 +1,11 @@
+body {
+  background-image: url("FlyingAssets/Background.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+#gunship {
+  width: 100px;
+  height: 100px;
+  position:absolute;
+  transform:translate(-50%,-50%);
+}
