@@ -9,6 +9,7 @@ body {
   height: 100px;
   position:absolute;
   transform:translate(-50%,-50%);
+  z-index: 1;
 }
 #bullet {
   position: absolute;
@@ -21,4 +22,8 @@ body {
   to {
     transform: translateY(-1000px);;
   }
+}
+nav {
+  position: absolute;
+  z-index: 2;
 }

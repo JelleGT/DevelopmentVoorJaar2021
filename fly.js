@@ -1,9 +1,13 @@
-//Voor het bewegen van het schip
+//Zoekt het schip
 let ship = document.getElementById('gunship');
+
+
+//Voor het bewegen van het schip
 const onMouseMove = (e) =>{
   ship.style.left = e.pageX + 'px';
   ship.style.top = e.pageY + 'px';
 }
+
 
 //Voor het schieten van bullets
 const shoot = (e) =>{
@@ -19,13 +23,30 @@ const shoot = (e) =>{
 document.addEventListener('mousemove', onMouseMove);
 document.addEventListener("mousedown", shoot)
 
-//Na een tijdje explodeert het schip met geluid
-setTimeout(function(){
-  var explosion = document.getElementById("gunship");
-  setTimeout(function(){
-    gunship.style.display = "none";
+
+//Explodeert het schip
+function explodeShip() {
+  setTimeout(function() {
+    ship.style.display = "none";
   }, 1200);
   var boom = document.getElementById("boom");
   boom.play();
-  explosion.src = "FlyingAssets/Explosion.gif"
-}, 6000);
+  ship.src = "FlyingAssets/Explosion.gif"
+}
+
+
+//Plaatst een nieuw schip
+function spawnShip() {
+  ship.src = "FlyingAssets/Gunship_top.png"
+  ship.style.display = "block";
+}
+
+//Speelt en stopt de muziek
+function playMusic() {
+  var theme = document.getElementById("prime");
+  theme.play();
+}
+function stopMusic() {
+  var theme = document.getElementById("prime");
+  theme.pause();
+}
