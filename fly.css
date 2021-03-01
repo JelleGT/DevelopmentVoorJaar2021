@@ -2,10 +2,23 @@ body {
   background-image: url("FlyingAssets/Background.png");
   background-size: cover;
   background-repeat: no-repeat;
+  overflow: hidden;
 }
 #gunship {
   width: 100px;
   height: 100px;
   position:absolute;
   transform:translate(-50%,-50%);
+}
+#bullet {
+  position: absolute;
+  animation: movebullet 2s;
+}
+@keyframes movebullet {
+  from {
+    transform: none;
+  }
+  to {
+    transform: translateY(-1000px);;
+  }
 }
