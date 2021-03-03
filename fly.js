@@ -11,10 +11,11 @@ const onMouseMove = (e) =>{
 
 //Voor het schieten van bullets
 const shoot = (e) =>{
-  var div = document.createElement('div');
-  div.setAttribute("id","bullet");
-  div.style.cssText = 'width:5px;height:10px;background-color:blue;left:' + e.pageX + 'px;top:' + e.pageY + 'px;';
-  document.body.appendChild(div);
+  var missile = document.createElement('img');
+  missile.setAttribute("id","bullet");
+  missile.setAttribute("src","Flyingassets/missile.png");
+  missile.style.cssText = 'width:20px;height:45px;left:' + (e.pageX - 10) + 'px;top:' + (e.pageY - 20) + 'px;';
+  document.body.appendChild(missile);
   setTimeout(function(){
     var gone = document.getElementById('bullet');
     gone.remove();

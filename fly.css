@@ -20,10 +20,35 @@ body {
     transform: none;
   }
   to {
-    transform: translateY(-1000px);;
+    transform: translateY(-2000px);;
   }
 }
 nav {
+  border: 2px black solid;
+  width: 120px;
+  background-color: #F4A744;
+  border-radius: 10px;
+  height: 50vh;
+  margin-top: 5vh;
+  margin-bottom: 5vh;
+  padding-bottom: 20vh;
+  padding-top: 20vh;
   position: absolute;
   z-index: 2;
+}
+button {
+  border: 4px #34a500 outset;
+  background-color: #41CE00;
+  font-weight: bold;
+  border-radius: 5px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 50px;
+  width: 80px;
+  height: 50px;
+}
+button:focus {
+  border: 4px #34a500 inset;
+  outline:none;
 }
