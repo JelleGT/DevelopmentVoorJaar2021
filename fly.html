@@ -5,10 +5,15 @@
     <link href="fly.css" rel="stylesheet"/>
   </head>
   <body id="space">
+    <section id="overlay">
+      <h1 id="title">Metroid: Space Shooter</h1>
+      <h2 id="play" onclick="startGame()">Click here to play...</h2>
+      <h3 id="warning">There is music and sound in the game, watch your volume</h3>
+    </section>
     <nav>
       <button onclick="playMusic()" id="playmusic">Play Music</button>
-      <button onclick="stopMusic()" id="stopmusic">Stop Music</button>
-      <button onclick="explodeShip()">Explode Ship</button>
+      <button onclick="stopMusic()" id="stopmusic">Pause Music</button>
+      <button onclick="explodeShip()">Explode Ship (2s)</button>
       <button onclick="spawnShip()">Spawn Ship</button>
     </nav>
     <audio id="boom">
@@ -19,7 +24,10 @@
         <source src="FlyingAssets/Prime.wav" type="audio/wav">
         Your browser does not support this audio element
     </audio>
-    <img id="gunship" src="FlyingAssets/Gunship_top.png" />
+    <audio id="pew">
+      <source src="FlyingAssets/PEW.wav" type="audio/wav">
+    </audio>
+    <img id="gunship" src="FlyingAssets/Gunship_Top.png" />
     <script src="fly.js"></script>
   </body>
 </html>
