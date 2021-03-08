@@ -1,0 +1,214 @@
+@font-face {
+  font-family: Leelawadee;
+  src: url(LeelawUI.ttf);
+}
+* {
+  color: white;
+}
+p {
+  margin-top: 50px;
+  font-size: 16px;
+  line-height: 23px;
+  text-align: left;
+  margin-left: auto;
+  margin-right: auto;
+}
+body {
+  font-family: Leelawadee;
+  color: white;
+  background-color: #03010D;
+  text-align: center;
+  margin: 0px;
+}
+section {
+  margin: auto;
+  width: 80%;
+}
+
+
+/*Alles voor de eerste intropagina*/
+#intro {
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  line-height: 30px;
+  transform: translateY(-50%)
+}
+h1 {
+  font-size: 30px;
+}
+#title {
+  -webkit-animation: 3s ease 0s normal forwards 1 fadein;
+  animation: 3s ease 0s normal forwards 1 fadein;
+}
+h2 {
+  font-size: 24px;
+  color: white;
+}
+#about {
+  font-weight: lighter;
+  -webkit-animation: 3s ease 0s normal forwards 1 fadein;
+  animation: 6s ease 0s normal forwards 1 fadein;
+}
+#name {
+  font-weight: lighter;
+  -webkit-animation: 3s ease 0s normal forwards 1 fadein;
+  animation: 9s ease 0s normal forwards 1 fadein;
+}
+h3 {
+  font-size: 20px;
+  font-weight: lighter;
+}
+@keyframes fadein{
+    0% { opacity:0; }
+    35% { opacity:0; }
+    100% { opacity:1; }
+}
+@-webkit-keyframes fadein{
+    0% { opacity:0; }
+    35% { opacity:0; }
+    100% { opacity:1; }
+}
+
+
+/*Alles voor de selectiepagina*/
+#selection {
+display: none;
+height: 100vh;
+justify-content: center;
+line-height: 100vh;
+top: 0;
+}
+.select {
+  transition: all .5s ease;
+  -webkit-transition: all .5s ease;
+  width: 200px;
+  border: 5px #D4D4D4 solid;
+  margin: -3px;
+}
+.select:hover {
+  transition: all .5s ease;
+  -webkit-transition: all .5s ease;
+  background-color: #360051;
+  border: 5px #360051 solid;
+}
+a {
+  color: white;
+  text-decoration: none;
+}
+
+
+/*Alles voor de drie verschillende pagina's*/
+button {
+  transition: all .5s ease;
+  -webkit-transition: all .5s ease;
+  margin: auto;
+  width: 500px;
+  height: 100px;
+  border: 1px #D4D4D4 solid;
+  border-radius: 0px;
+  background-color: #03010D;
+}
+button:hover {
+  transition: all .5s ease;
+  -webkit-transition: all .5s ease;
+  background-color: #360051;
+  cursor: pointer;
+}
+.item, .location {
+  transition: all .5s ease;
+  -webkit-transition: all .5s ease;
+  margin-top: 100px;
+  width: 400px;
+  height: 100px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 60px;
+  border: 1px #03010D solid;
+}
+.item:hover, .location:hover {
+  transition: all .5s ease;
+  -webkit-transition: all .5s ease;
+  background-color: #080519;
+  border: 1px #F1F1F1 solid;
+}
+.item:hover {
+  cursor: pointer;
+}
+#characterSelection, #worldSelection, #creatureSelection {
+  display: flex;
+  flex-wrap: wrap;
+}
+.display {
+  display: none;
+}
+nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+#twoButtons button{
+  margin: 0px;
+}
+
+
+/*Specifiek voor de creatures pagina*/
+#creatureSelection img, #creatureSelection a {
+  margin-left: auto;
+  margin-right: auto;
+  width: 400px;
+  height: 400px;
+  object-fit: cover;
+  overflow: hidden;
+}
+#creatureSelection a {
+  transition: all .5s ease;
+  -webkit-transition: all .5s ease;
+  margin-top: 100px;
+}
+#creatureSelection a:hover {
+  transition: all .5s ease;
+  -webkit-transition: all .5s ease;
+  opacity: 0.7;
+}
+
+/*Alles voor de character en worldpagina*/
+.charSection, .worldSection {
+  display: none;
+}
+.characterName, .worldName {
+  display: none;
+  margin-left: 10px;
+  margin-right: 10px;
+  height: 100px;
+}
+.characterInfo, .worldInfo {
+  margin-bottom: 50px;
+  width: 750px;
+}
+.characterImage, .worldImg {
+  height: 550px;
+  margin-top: 50px;
+}
+@media only screen and (max-width: 900px) {
+  .characterInfo, .worldInfo {
+    width: 500px;
+  }
+  .characterImage .worldImg {
+    height: 400px;
+  }
+  nav {
+    flex-direction: column;
+  }
+  #twoButtons button, #characterName {
+    margin: auto;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .characterInfo, .worldInfo {
+    width: 300px;
+  }
+  .characterImage .worldImg {
+    height: 200px;
+  }
+}

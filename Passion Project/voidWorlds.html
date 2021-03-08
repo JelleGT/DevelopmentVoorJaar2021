@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+		<title>Void Legacy: Worlds</title>
+		<link rel="stylesheet" href="Void.css">
+  </head>
+  <body>
+    <div class="display">
+      <nav>
+        <button onclick="javascript:delay('VoidSelection.html')"><h2>Back to Selection</h2></button>
+      </nav>
+      <section id="worldSelection">
+        <div onclick="javascript:delay('worldPage.html',);setWorld(this.id)" class="item" id="xhernos"><h3>Xhernos</h3></div>
+        <div onclick="javascript:delay('worldPage.html',);setWorld(this.id)" class="item" id="earth"><h3>Earth</h3></div>
+        <div onclick="javascript:delay('worldPage.html',);setWorld(this.id)" class="item" id="verida"><h3>Verida</h3></div>
+      </section>
+    </div>
+    <script src="jquery-3.5.1.min.js"></script>
+    <script src="VoidPage.js"></script>
+  </body>
+</html>
