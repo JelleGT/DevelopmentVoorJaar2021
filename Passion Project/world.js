@@ -1,15 +1,18 @@
 document.getElementById(currentWorld).style.display = "block";
 document.getElementById(currentWorld + "Name").style.display = "block";
-var hide = document.getElementById("worldSelection");
-var title = document.getElementById("show");
-hide.style.display = "none";
+$("#worldSelection").hide();
+
 
 function showMe() {
-  if (hide.style.display === "none") {
-    hide.style.display = "block";
-    title.innerHTML = "Hide Locations";
+  let show = document.getElementById("show");
+  $("#worldSelection").fadeToggle(1000);
+  if (show.innerHTML === "Show Locations") {
+    $("#show").fadeOut(function() {
+      $(this).text("Hide Locations").fadeIn(500);
+    });
   } else {
-    hide.style.display = "none";
-    title.innerHTML = "Show Locations";
+    $("#show").fadeOut(function() {
+      $(this).text("Show Locations").fadeIn(500);
+    });
   }
 }
