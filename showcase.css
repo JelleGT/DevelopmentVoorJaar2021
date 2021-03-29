@@ -1,0 +1,43 @@
+body {
+  margin: 0;
+}
+article {
+  background-color: rgba(0,0,255,0.5);
+  transition: 0.5s;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+article:hover {
+  background-color: rgba(0,0,255,0.8);
+  transition: 0.5s;
+  color: white;
+}
+h1, h2, h3, .more {
+  text-align: center;
+}
+h1 {
+  font-size: 30px;
+  background-color: black;
+  margin: 0;
+  padding: 20px;
+  color: white;
+}
+h2 {
+  font-size: 24px;
+}
+h3 {
+  font-size: 20px;
+  padding: 10px;
+  margin: 0;
+  width: 300px;
+  margin-left: auto;
+  margin-right: auto;
+}
+h3:hover {
+  transition: 0.5s;
+  color: grey;
+}
+.more {
+  font-size: 20px;
+  font-weight: bold;
+}
