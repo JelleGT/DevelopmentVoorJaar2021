@@ -2,14 +2,10 @@ body {
   margin: 0;
 }
 article {
-  background-color: rgba(0,0,255,0.5);
+  background-color: rgba(0,0,255,0.8);
   transition: 0.5s;
   padding: 10px;
   margin-bottom: 20px;
-}
-article:hover {
-  background-color: rgba(0,0,255,0.8);
-  transition: 0.5s;
   color: white;
 }
 h1, h2, h3, .more {
@@ -32,12 +28,27 @@ h3 {
   width: 300px;
   margin-left: auto;
   margin-right: auto;
+  transition: 0.5s;
 }
 h3:hover {
   transition: 0.5s;
   color: grey;
+  cursor: pointer;
 }
 .more {
   font-size: 20px;
   font-weight: bold;
+}
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-height: 300px;
+}
+.hidden {
+  display: none;
+}
+h3:hover + .hidden {
+  display: block;
+  transition: 1s;
 }
