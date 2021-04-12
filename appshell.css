@@ -15,7 +15,7 @@ body {
 
 
 header {
-  background-color: #DDA0DD;
+  background-color: #c9c9c9;
   grid-area: kop;
   display: flex;
   justify-content: center;
@@ -29,18 +29,43 @@ main {
   width: 100vw;
   scroll-snap-type: x mandatory;
 }
-.slider {
-  width: 300vw;
-  display: flex;
+
+
+@media only screen and (min-width: 100px) {
+  .slider {
+    width: 300vw;
+    display: flex;
+  }
+  .slider section {
+    width: 100vw;
+    scroll-snap-align: start;
+  }
 }
-.slider section {
-  width: 100vw;
-  scroll-snap-align: start;
+@media only screen and (min-width: 600px) {
+  .slider {
+    width: 150vw;
+    display: flex;
+  }
+  .slider section {
+    width: 50vw;
+    scroll-snap-align: start;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .slider {
+    width: 100vw;
+    display: flex;
+    scroll-snap-align: start;
+  }
+  .slider section {
+    width: 33.33vw;
+    scroll-snap-align: start;
+  }
 }
 
 
 footer {
-  background-color: #DDA0DD;
+  background-color: #c9c9c9;
   grid-area: menu;
   display: flex;
   align-items: stretch;
@@ -83,8 +108,17 @@ ul {
   list-style: none;
   flex: 1;
 }
-
-
-h1 {
+li {
   text-align: center;
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+h1, h2 {
+  text-align: center;
+}
+
+h2 {
+  margin-top: 15px;
+  margin-bottom: 15px;
 }
