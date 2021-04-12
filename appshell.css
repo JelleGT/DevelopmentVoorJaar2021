@@ -1,0 +1,90 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: #f1f1f1;
+  font-size: 16px;
+  color: #222;
+  display: grid;
+  grid-template-areas: "kop" "inhoud" "menu";
+  grid-template-rows: 75px 1fr 150px;
+  height: 100vh
+}
+
+
+header {
+  background-color: #DDA0DD;
+  grid-area: kop;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main {
+  grid-area: inhoud;
+  display: flex;
+  align-items: stretch;
+  overflow-x:scroll;
+  width: 100vw;
+  scroll-snap-type: x mandatory;
+}
+.slider {
+  width: 300vw;
+  display: flex;
+}
+.slider section {
+  width: 100vw;
+  scroll-snap-align: start;
+}
+
+
+footer {
+  background-color: #DDA0DD;
+  grid-area: menu;
+  display: flex;
+  align-items: stretch;
+}
+footer nav {
+  flex: 1;
+  display: flex;
+  align-content: stretch;
+}
+nav ul {
+  display: flex;
+  flex: 1;
+  align-content: stretch;
+}
+nav ul li {
+  flex: 1;
+  display: flex;
+  align-content: stretch;
+}
+nav ul li a {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: #222;
+  opacity: 0.8;
+}
+nav ul li a.actief {
+  color: #eee;
+  background-color: #800080;
+  opacity: 1;
+}
+nav ul li a i {
+  margin-bottom: 10px;
+  font-size: 2em;
+}
+ul {
+  list-style: none;
+  flex: 1;
+}
+
+
+h1 {
+  text-align: center;
+}
